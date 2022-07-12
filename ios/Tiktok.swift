@@ -22,11 +22,11 @@ class Tiktok: UIViewController {
   }
   
   @objc
-  func share(_ paths: [String], callback: @escaping RCTResponseSenderBlock) {
+  func share(_ path: String, callback: @escaping RCTResponseSenderBlock) {
     PHPhotoLibrary.shared().performChanges({
       let request = TikTokOpenSDKShareRequest()
         request.mediaType = TikTokOpenSDKShareMediaType.video;
-        request.localIdentifiers = paths;
+        request.localIdentifiers = [path];
       DispatchQueue.main.async {
         request.send(completionBlock: { resp -> Void in
           callback([resp.errCode.rawValue])
