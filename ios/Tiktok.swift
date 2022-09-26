@@ -7,7 +7,7 @@ class Tiktok: UIViewController {
     
   @objc
   func auth(_ callback: @escaping RCTResponseSenderBlock) {
-    let scopes = ["user.info.basic,video.list"] // list your scopes
+    let scopes = ["user.info.basic"] // list your scopes
     let scopesSet = NSOrderedSet(array:scopes)
     let request = TikTokOpenSDKAuthRequest()
     request.permissions = scopesSet

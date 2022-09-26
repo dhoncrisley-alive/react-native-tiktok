@@ -8,7 +8,7 @@ target 'TiktokExample' do
 
   use_react_native!(:path => config["reactNativePath"])
 
-  pod 'react-native-tiktok', :path => '../..'
+ pod 'react-native-tiktok', :path => '../..'
 
   # Enables Flipper.
   #
